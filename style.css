@@ -1,0 +1,508 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #3c59ba 0%, #75c1ff 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: linear-gradient(#3c59ba, #75c1ff); 
+    color: #fff; 
+}
+
+.logo a {
+    background: linear-gradient(#74ebd5, #acb6e5);
+    font-family: "Rubik", sans-serif;
+    font-size: 50px; 
+    text-transform: uppercase;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: flex; 
+    justify-content: center;
+}
+
+nav {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+nav .container {
+    padding: 0 20px; 
+}
+
+.navbar-menu {
+    list-style-type: none;
+    display: flex; 
+    align-items: center; 
+    padding-left: 0; 
+}
+
+.navbar-menu li {
+    padding: 10px 20px; 
+}
+
+.navbar-menu li a {
+    color: #fff; 
+    text-decoration: none;
+    transition: color 0.3s ease; 
+    font-size: 20px;
+}
+
+.navbar-menu li a:hover {
+    color: #74ebd5; 
+}
+.button-link {
+    display: inline-block; /* Позволяет применять отступы и размеры как у кнопки */
+    padding: 10px 20px; /* Отступы, аналогичные вашей кнопке */
+    color: white; /* Цвет текста */
+    background: linear-gradient(to right, #3c59ba, #75c1ff); /* Градиентный фон */
+    border: none;
+    border-radius: 20px; /* Закругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень */
+    cursor: pointer; /* Курсор в виде руки, указывающей на возможность клика */
+    text-transform: uppercase; /* Верхний регистр */
+    font-weight: bold; /* Жирное начертание */
+    text-decoration: none; /* Убираем подчеркивание текста */
+    transition: all 0.3s ease; /* Плавное изменение свойств при наведении и активации */
+}
+
+.button-link:hover {
+    background: linear-gradient(to right, #3c59ba, #8acbff); /* Светлый градиент при наведении */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
+}
+
+.button-link:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3); /* Внутренняя тень для эффекта нажатия */
+}
+main {
+    padding: 20px;
+    background: #f9f9f9; 
+    font-family: 'Rubik', sans-serif;
+}
+
+.welcome-section h1 {
+    color: #3c59ba;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.welcome-section p {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.welcome-section img {
+    display: block; /* Изображение блочное, чтобы margin работал */
+    width: 80%; /* Вы можете оставить это, если хотите, чтобы изображение было меньше, чем контейнер */
+    max-width: 1000px; /* Максимальная ширина для больших экранов */
+    height: auto; /* Автоматическая высота для поддержания пропорций */
+    margin: 20px auto; /* Добавляет отступы и центрирует изображение */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для глубины */
+    border-radius: 4px; /* Небольшое закругление углов */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Добавляет тень, создающую эффект глубины */
+    border: 2px solid #f0f0f0; /* Тонкая рамка для акцента на фотографии */
+    animation: pulse 2s ease-in-out;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.featured-dishes {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.featured-dishes h2 {
+    font-size: 2em;
+    color: #3c59ba;
+    margin-bottom: 20px;
+}
+/* Основные стили для секции мероприятий */
+
+.slider-container {
+    overflow: hidden;
+    width: 100%; /* Full width of the container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.slider-wrapper {
+    display: flex;
+    justify-content: center; /* This will center the child elements (the cards) */
+    align-items: center; /* This will vertically align the child elements */
+    transition: transform 0.5s ease-in-out;
+}
+
+.dish-card {
+    flex: 0 0 auto; /* Don't grow, don't shrink, and is automatically sized */
+    width: 300px; /* Желаемая фиксированная ширина для карточек */
+    height: 400px; /* Желаемая фиксированная высота для карточек */
+    overflow: hidden; /* Скроет части изображения, выходящие за границы */
+    margin: 10px; /* Add margins for spacing */
+    border: 1px solid #ddd; /* Light border matching the site */
+    background-color: #f8f8f8; /* Light card background */
+    text-align: center; /* Center text */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Consistent shadow for cards */
+    border-radius: 10px; /* Rounded corners for cards */
+    overflow: hidden; /* Ensures content fits within the rounded corners */
+}
+.dish-card img {
+    width: 300px; /* Ширина изображения */
+    height: 200px; /* Высота изображения */
+    object-fit: cover; /* Сохранить пропорции и обрезать изображение */
+}
+.prev-button, .next-button {
+    padding: 10px 20px;
+    border: 2px solid #007BFF;
+    background-color: white;
+    color: #007BFF;
+    cursor: pointer;
+    top: 39.5%; /* изменено на 50% для центрирования относительно высоты слайдера */
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.prev-button:hover, .next-button:hover {
+    background-color: #007BFF;
+    color: white;
+    border: 2px solid transparent;
+}
+
+/* Добавлен CSS для родительского элемента, который должен иметь относительное позиционирование */
+.slider-container {
+    position: relative;
+}
+.events {
+    background: #fff; /* Белый фон */
+    color: #242424; /* Цвет текста */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: auto;
+}
+
+.events h2 {
+    font-size: 2em;
+    color: #3c59ba;
+    margin-bottom: 20px;
+}
+
+.events p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.event {
+    background: #f5f5f5; /* Светло-серый фон для событий */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.event h3 {
+    color: #74ebd5; /* Цвет заголовков событий - голубой */
+    margin-bottom: 5px;
+}
+
+.event p {
+    color: black; /* Светло-серый текст абзацев */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.event a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background: linear-gradient(to right, #3c59ba, #75c1ff); /* Градиент для кнопок в событиях */
+    border-radius: 20px; /* Скругленные углы для кнопок */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.event a:hover {
+    background: linear-gradient(to right, #3c59ba, #8acbff); /* Светлый градиент при наведении на кнопку */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении на кнопку */
+}
+
+#about {
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px 20px;
+}
+
+#about h2 {
+    font-size: 2em;
+    color: #3c59ba;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Стили для раздела "Доставка" */
+#delivery {
+    background-color: #f8f9fa; /* Светлый фон для контраста с текстом */
+    color: #333; /* Темно-серый цвет текста для лучшей читаемости */
+    padding: 20px; /* Отступы внутри секции */
+    border-radius: 8px; /* Скругление углов */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для объемности */
+    margin: 20px auto; /* Автоматические отступы для центрирования секции */
+    max-width: auto; /* Максимальная ширина секции */
+}
+
+#delivery h2{
+    font-size: 2em;
+    color: #3c59ba;
+    margin-bottom: 20px;
+} 
+#delivery h3 {
+    color: #007bff; /* Синий цвет заголовков для привлечения внимания */
+    margin-top: 20px; /* Верхний отступ для заголовков */
+}
+
+#delivery p {
+    font-size: 16px; /* Размер шрифта для абзацев */
+    line-height: 1.6; /* Межстрочный интервал */
+    margin-top: 10px; /* Верхний отступ для абзацев */
+    text-align: justify; /* Выравнивание текста по ширине */
+}
+
+#delivery ul {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+#delivery li {
+    padding: 5px 0; /* Отступы для элементов списка */
+    background: linear-gradient(to right, #3c59ba, #75c1ff); /* Градиентный фон для элементов списка */
+    margin: 5px 0; /* Отступы между элементами списка */
+    border-radius: 5px; /* Скругление углов элементов списка */
+    color: white; /* Белый цвет текста для элементов списка */
+    padding: 10px; /* Отступы внутри элементов списка */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тень для элементов списка */
+}
+
+figure {
+    text-align: center; /* Центрирование изображения и подписи */
+    margin: 20px 0; /* Вертикальные отступы для фигуры */
+}
+
+figure img {
+    max-width: 100%; /* Изображение не выходит за рамки своего контейнера */
+    height: auto; /* Автоматическая высота изображения */
+    border-radius: 8px; /* Скругление углов изображения */
+    width: 700px;
+}
+
+figure figcaption {
+    color: #666; /* Цвет подписи к изображению */
+    font-size: 14px; /* Размер шрифта подписи */
+    margin-top: 5px; /* Отступ сверху для подписи */
+}
+
+#news {
+    background-color: #fff; /* White background */
+    padding: 40px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 40px auto; /* Center the news section */
+    max-width: auto; /* Set a max-width for the layout */
+}
+
+#news h2 {
+     font-size: 2em;
+    color: #3c59ba;
+    margin-bottom: 20px;
+}
+
+#news p {
+    color: #666; /* Grey color for the paragraph */
+    line-height: 1.6; /* Improve readability */
+}
+
+.news-items {
+    margin-top: 20px;
+}
+
+.news-item {
+    margin-bottom: 30px; /* Space between news items */
+    padding-bottom: 20px; /* Space at the bottom of each news item */
+    border-bottom: 1px solid #eee; /* Separator between news items */
+}
+
+.news-item h3 {
+    color: #007BFF; /* Theme color for news titles */
+    margin-bottom: 5px;
+}
+
+.news-date {
+    font-style: italic;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.news-summary {
+    margin-bottom: 15px;
+}
+
+.news-link {
+    background-color: #007BFF; /* Theme color for links/buttons */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.news-link:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+#show-all-news {
+    display: block; /* Make the button block level so it occupies its own line */
+    width: 200px; /* Set a fixed width for the button */
+    padding: 10px 0; /* Add padding */
+    margin: 20px auto; /* Center the button horizontally */
+    background-color: #007BFF; /* Theme color for the button */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+    text-align: center; /* Ensure the text is centered */
+    font-weight: bold; /* Make the text bold */
+}
+
+#show-all-news:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+/* Стили для раздела "Контакты" */
+#contacts {
+    background: #f5f5f5; /* Light background for the contact section */
+    padding: 40px;
+    text-align: center; /* Centering the content */
+}
+
+#contacts h2 {
+    font-size: 2em;
+    color: #3c59ba;
+    margin-bottom: 20px;
+}
+
+#contacts .contact-info p,
+#contacts .contact-socials .social-link {
+    color: #666; /* Slightly lighter color for text */
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+#contacts .contact-info p strong {
+    color: #000; /* Black color for emphasis */
+}
+
+/* Общие улучшения и детали */
+section {
+    text-align: center; /* Центрирование текста для всех секций */
+}
+footer {
+    background-color: #3c59ba; /* Темно-синий фон, подходящий под цветовую схему сайта */
+    color: #ffffff; /* Белый текст для контраста */
+    padding: 20px 0; /* Отступы внутри футера */
+    text-align: center; /* Центрирование текста */
+    font-size: 0.9em; /* Немного меньший размер шрифта для текста футера */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Равномерное распределение блоков внутри футера */
+    margin: 0 auto;
+    max-width: 1200px; /* Максимальная ширина контейнера футера */
+    padding: 20px; /* Подушка для контента */
+}
+
+.footer-nav, .social-links {
+    list-style: none; /* Убираем маркеры списка */
+}
+
+.footer-nav a, .social-links a {
+    color: #ffffff; /* Белый цвет ссылок */
+    text-decoration: none; /* Убираем подчеркивание текста */
+    margin: 0 10px; /* Маржа между ссылками */
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+.footer-nav a:hover, .social-links a:hover {
+    color: #74ebd5; /* Цвет при наведении, подходящий под цветовую схему сайта */
+}
+
+.contact-info p {
+    margin: 5px 0; /* Отступы между пунктами контактной информации */
+}
+
+.footer-bottom {
+    margin-top: 20px; /* Отступ сверху для нижнего блока */
+    font-size: 0.8em; /* Меньший размер шрифта для копирайта */
+}
+
+.footer-bottom p {
+    margin: 10px 0; /* Отступы для текста копирайта */
+}
+.user-contact a {
+    background-color: #74ebd5; /* Цвет фона кнопки */
+    color: #ffffff; /* Цвет текста кнопки */
+    padding: 10px 20px; /* Внутренние отступы кнопки */
+    border: none; /* Убираем границу у кнопки */
+    border-radius: 5px; /* Закругляем углы кнопки */
+    cursor: pointer; /* Изменяем курсор при наведении на кнопку */
+    transition: background-color 0.3s ease; /* Плавное изменение цвета фона при наведении */
+}
+
+.user-contact a:hover {
+    background-color: #3c20ab; /* Цвет фона кнопки при наведении */
+}
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #000080;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#back-to-top:hover {
+    opacity: 0.8;
+}
