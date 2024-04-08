@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Бронирование столика в ресторане "GeMi"</title>
+    <link rel="stylesheet" type="text/css" href="../css/reservationstyle.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Autour+One&family=Patrick+Hand+SC&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">GeMi</a>
+        </div>
+        <nav>
+            <div class="container">
+                <div class="navbar-wrap">
+                    <ul class="navbar-menu">
+                        <li><a href="index.html">О нас</a></li>
+                        <li><a href="index.html">Меню</a></li>
+                        <li><a href="index.html">Доставка</a></li>
+                        <li><a href="index.html">Новости</a></li>
+                        <li><a href="index.html">Контакты</a></li>
+                        <li><a href="reservation.html" target="_blank" class="button-link">Забронировать</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="reservation-form">
+            <h1>Бронирование столика</h1>
+            <form action="submit_reservation.php" method="post">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Телефон" required>
+                <input type="date" name="date" required>
+                <input type="time" name="time" required>
+                <textarea name="notes" placeholder="Особые пожелания"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+        <div class="footer-nav">
+            <a href="#">О нас</a>
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Условия использования</a>
+        </div>
+        <div class="contact-info">
+            <p>Телефон: +7 123 456 7890</p>
+            <p>Email: info@gemi.ru</p>
+        </div>
+<div class="user-contact">
+    <a href="../html/qua.html" target="_blank" class="openQua">Обратиться</a>
+</div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 Ресторан "GeMi". Все права защищены.</p>
+    </div>
+    <button id="back-to-top">Наверх</button>
+</footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: linear-gradient(#3c59ba, #75c1ff); 
+    color: #fff; 
+}
+
+.logo a {
+    background: linear-gradient(#74ebd5, #acb6e5);
+    font-family: "Rubik", sans-serif;
+    font-size: 50px; 
+    text-transform: uppercase;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    display: flex; 
+    justify-content: center;
+}
+
+nav {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+}
+
+nav .container {
+    padding: 0 20px; 
+}
+
+.navbar-menu {
+    list-style-type: none;
+    display: flex; 
+    align-items: center; 
+    padding-left: 0; 
+}
+
+.navbar-menu li {
+    padding: 10px 20px; 
+}
+
+.navbar-menu li a {
+    color: #fff; 
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+.navbar-menu li a:hover {
+    color: #74ebd5; 
+}
+.button-link {
+    display: inline-block; /* Позволяет применять отступы и размеры как у кнопки */
+    padding: 10px 20px; /* Отступы, аналогичные вашей кнопке */
+    color: white; /* Цвет текста */
+    background: linear-gradient(to right, #3c59ba, #75c1ff); /* Градиентный фон */
+    border: none;
+    border-radius: 20px; /* Закругленные углы */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Тень */
+    cursor: pointer; /* Курсор в виде руки, указывающей на возможность клика */
+    text-transform: uppercase; /* Верхний регистр */
+    font-weight: bold; /* Жирное начертание */
+    text-decoration: none; /* Убираем подчеркивание текста */
+    transition: all 0.3s ease; /* Плавное изменение свойств при наведении и активации */
+}
+
+.button-link:hover {
+    background: linear-gradient(to right, #3c59ba, #8acbff); /* Светлый градиент при наведении */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
+}
+
+.button-link:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3); /* Внутренняя тень для эффекта нажатия */
+}
+.reservation-form {
+    max-width: 600px; /* Установите максимальную ширину формы */
+    margin: 40px auto; /* Центрирование формы с верхним и нижним отступами */
+    padding: 20px; /* Внутренние отступы для формы */
+    background: #ffffff; /* Белый фон для формы */
+    border-radius: 8px; /* Скругленные углы формы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для формы */
+    text-align: center; /* Центрирование текста */
+}
+
+.reservation-form h1 {
+    color: #3c59ba; /* Синий цвет заголовка, чтобы соответствовать стилю сайта */
+    margin-bottom: 20px; /* Отступ снизу для заголовка */
+}
+
+.reservation-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Расстояние между полями формы */
+}
+
+.reservation-form input[type="text"],
+.reservation-form input[type="tel"],
+.reservation-form input[type="date"],
+.reservation-form input[type="time"],
+.reservation-form textarea {
+    padding: 10px; /* Отступы внутри поля ввода */
+    margin-bottom: 15px; /* Отступ снизу для каждого поля */
+    border: 1px solid #ccc; /* Цвет границы полей */
+    border-radius: 5px; /* Скругление углов полей ввода */
+    width: calc(100% - 20px); /* Полная ширина с учетом padding */
+}
+
+.reservation-form button {
+    padding: 10px 20px; /* Отступы для кнопки */
+    color: white; /* Цвет текста кнопки */
+    background: linear-gradient(to right, #3c59ba, #75c1ff); /* Градиентный фон для кнопки */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 20px; /* Скругление углов кнопки */
+    cursor: pointer; /* Курсор в виде руки при наведении на кнопку */
+    transition: all 0.3s ease; /* Плавное изменение свойств при действиях */
+    text-transform: uppercase; /* Все буквы в верхнем регистре */
+    font-weight: bold; /* Жирный шрифт текста */
+    margin-top: 20px; /* Отступ сверху для кнопки */
+    width: auto; /* Авто ширина в зависимости от контента */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Тень для кнопки */
+}
+
+.reservation-form button:hover {
+    background: linear-gradient(to right, #3c59ba, #8acbff); /* Изменение цвета фона кнопки при наведении */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Увеличенная тень при наведении */
+}
+
+.reservation-form button:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.3); /* Внутренняя тень при нажатии */
+}
